@@ -2,12 +2,14 @@ import { useState } from "react";
 
 const Form = ({ onGenerate }) => {
   const [tone, setTone] = useState("Professional");
-  const [name, setName] = useState("");
-  const [company, setCompany] = useState("");
-  const [cv, setCv] = useState("");
-  const [jobTitle, setJobTitle] = useState("");
-  const [coverLetterTo, setCoverLetterTo] = useState("Hirinf ");
-  const [jobOffer, setJobOffer] = useState("");
+  const [name, setName] = useState("Ekaterina Korzneva");
+  const [company, setCompany] = useState("Luminor");
+  const [cv, setCv] = useState(
+    "React Developer, 5 years of experience, HTML/CSS, JavaScript, React"
+  );
+  const [jobTitle, setJobTitle] = useState("Inernship for React Developer");
+  const [coverLetterTo, setCoverLetterTo] = useState("Hiring Manager");
+  const [jobOffer, setJobOffer] = useState("Software Engineering Internship");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,14 +18,6 @@ const Form = ({ onGenerate }) => {
 
   return (
     <div className="min-h-screen bg-[#f5e0b8] text-white flex flex-col items-center p-6">
-      {/* Heading */}
-      <h1 className="text-5xl font-bold text-[#BF3131] text-center">
-        Dear Hiring Manager ✍🏼
-      </h1>
-      <h2 className="text-lg text-black text-center mt-2">
-        Generate a professional cover letter in seconds.
-      </h2>
-
       {/* Form */}
       <form
         className="w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-6xl xl:max-w-7xl bg-[#f5e0b8] p-6 mt-6"

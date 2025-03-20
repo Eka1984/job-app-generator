@@ -1,23 +1,26 @@
 import axios from "axios";
 
-export const generateApplicationLetter = async ({ name, cv, jobOffer }) => {
-  const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
-  const prompt = `Generate a professional job application letter for ${name} based on the following CV: ${cv}. The job description is: ${jobOffer}.`;
-
+export const generateApplicationLetter = async ({
+  tone,
+  name,
+  company,
+  cv,
+  jobTitle,
+  coverLetterTo,
+  jobOffer,
+}) => {
   try {
-    const response = await axios.post(
-      "https://api.openai.com/v1/chat/completions",
-      {
-        model: "gpt-4",
-        messages: [{ role: "user", content: prompt }],
-        temperature: 0.7,
-      },
-      {
-        headers: { Authorization: `Bearer ${apiKey}` },
-      }
-    );
+    const response = await axios.post("http://localhost:5000/generate-letter", {
+      tone,
+      name,
+      company,
+      cv,
+      jobTitle,
+      coverLetterTo,
+      jobOffer,
+    });
 
-    return response.data.choices[0].message.content;
+    return response.data.coverLetter;
   } catch (error) {
     console.error("Error generating letter:", error);
     return "Error generating application letter.";
