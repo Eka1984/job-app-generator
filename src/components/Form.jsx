@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Form = ({ onGenerate }) => {
   const [tone, setTone] = useState("Professional");
-  const [name, setName] = useState("Ekaterina Korzneva");
+  const [name, setName] = useState("John Doe");
   const [company, setCompany] = useState("Luminor");
   const [cv, setCv] = useState(
     "React Developer, 5 years of experience, HTML/CSS, JavaScript, React"
@@ -17,7 +17,7 @@ const Form = ({ onGenerate }) => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f5e0b8] text-white flex flex-col items-center p-6">
+    <div className="bg-[#f5e0b8] text-white flex flex-col items-center p-6">
       {/* Form */}
       <form
         className="w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-6xl xl:max-w-7xl bg-[#f5e0b8] p-6 mt-6"
