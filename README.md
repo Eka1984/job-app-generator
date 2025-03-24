@@ -1,12 +1,17 @@
-# React + Vite
+# 📝 Job Application Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React-based web app that helps users generate tailored job application letters using the OpenAI API. The form collects relevant user details, dynamically builds a request, and displays a generated letter that can be copied and used in job applications.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Dynamic form handling based on user inputs  
+- Integration with OpenAI's ChatGPT API  
+- Generates job-specific cover letters instantly  
+- Clean and responsive UI built with React  
+- Option to copy and reuse the generated letter
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React  
+- Node.js  
+- OpenAI API (ChatGPT)
