@@ -1,4 +1,4 @@
-const Output = ({ letter }) => {
+const Output = ({ letter, onReset }) => {
   if (!letter) return null; // Don't show anything if there's no letter yet
 
   return (
@@ -11,7 +11,15 @@ const Output = ({ letter }) => {
           value={letter}
           className="w-full p-4 border border-gray-300 rounded-lg bg-white text-black h-170 text-lg resize-none shadow-xl"
         />
-        {/* <p className="whitespace-pre-line">{letter}</p>{" "} */}
+        {/* Go Back Button */}
+        <div class="mt-2 mr-5 text-right">
+          <button
+            class="text-xl text-black hover:text-[#BF3131] underline"
+            onClick={onReset}
+          >
+            Return & Edit
+          </button>
+        </div>
       </div>
     </div>
   );

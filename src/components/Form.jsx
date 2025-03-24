@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Form = ({ onGenerate }) => {
+const Form = ({ onGenerate, initialData }) => {
   const [tone, setTone] = useState("Professional");
   const [name, setName] = useState("John Doe");
   const [company, setCompany] = useState("Luminor");
@@ -10,6 +10,18 @@ const Form = ({ onGenerate }) => {
   const [jobTitle, setJobTitle] = useState("Inernship for React Developer");
   const [coverLetterTo, setCoverLetterTo] = useState("Hiring Manager");
   const [jobOffer, setJobOffer] = useState("Software Engineering Internship");
+
+  useEffect(() => {
+    if (initialData) {
+      setTone(initialData.tone);
+      setName(initialData.name);
+      setCompany(initialData.company);
+      setCv(initialData.cv);
+      setJobTitle(initialData.jobTitle);
+      setCoverLetterTo(initialData.coverLetterTo);
+      setJobOffer(initialData.jobOffer);
+    }
+  }, [initialData]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

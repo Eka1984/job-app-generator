@@ -7,13 +7,19 @@ import Header from "./components/Header.jsx";
 
 function App() {
   const [letter, setLetter] = useState("");
+  const [formData, setFormData] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const handleGenerate = async (data) => {
     setLoading(true);
+    setFormData(data);
     const result = await generateApplicationLetter(data);
     setLetter(result);
     setLoading(false);
+  };
+
+  const handleReset = () => {
+    setLetter("");
   };
 
   return (
@@ -24,9 +30,9 @@ function App() {
           Generating your cover letter...
         </p>
       ) : !letter ? (
-        <Form onGenerate={handleGenerate} />
+        <Form onGenerate={handleGenerate} initialData={formData} />
       ) : (
-        <Output letter={letter} />
+        <Output letter={letter} onReset={handleReset} />
       )}
     </div>
   );
