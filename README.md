@@ -15,3 +15,15 @@ A simple React-based web app that helps users generate tailored job application 
 - React  
 - Node.js  
 - OpenAI API (ChatGPT)
+
+## Backend
+
+This project includes a simple Node.js backend (not published here) that serves as a lightweight proxy to the OpenAI Chat API. The backend:
+
+- Accepts POST requests with form and user input
+- Constructs a prompt based on the input
+- Sends the request to the ChatGPT API
+- Returns the generated application letter to the frontend
+
+The backend is kept private to avoid exposing API keys. If needed, I can share a stripped-down version or explain the logic in more detail.
+
