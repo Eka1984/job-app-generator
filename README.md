@@ -27,3 +27,6 @@ This project includes a simple Node.js backend (not published here) that serves 
 
 The backend is kept private to avoid exposing API keys. If needed, I can share a stripped-down version or explain the logic in more detail.
 
+![App Demo](./demo.gif)
+
+
